@@ -13,7 +13,9 @@ int main()
 		s +=x;
 		if(x<min)min =x;
 		if(x>max)max = x;
+/*
 		printf("x = %d, min = %d,max = %d\n",x,min,max );
+*/
 		n++;
 	}
 	printf("%d %d %.3f\n",min,max,(double)s/n);
