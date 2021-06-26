@@ -1,15 +1,21 @@
+#include<string>
+#include<iostream>
+#include<vector>
+#include<map>
+
+using namespace std;
 struct Point {
 	int x,y;
 	Point(int x = 0,int y = 0):x(x),y(y) {}
 };
 typedef Point Vector;
 
-using namespace std;
+
 
 const int GSize = 5;
 vector<string> grid;
 Point ePos;
-map<char,vector> DIRS;
+map<char, Vector> DIRS;
 
 bool valid(const Point& p){
 	return p.x>= 0 && p.x< GSize && p.y >= 0 && p.y < GSize;
@@ -27,7 +33,7 @@ void printGrid(){
 
 bool tryMove(char cmd){
 	//cout << "move " << cmd <<":" <<endl;
-	if(!DIRS.count(cmd))) return false;
+	if(!DIRS.count(cmd)) return false;
 	assert(DIRS.count(cmd));
 	Point p = ePos + DIRS[cmd];
 	if(!valid(p)) return false;
@@ -69,8 +75,8 @@ int main()
 			if(end) break;
 		}
 		bool legal = true;
-		for( int i = 0;i<move.size();i++)
-			if(!tryMove(move[i])){legal = false;break;}
+		for( int i = 0;i < moves.size();i++)
+			if(!tryMove(moves[i])){legal = false;break;}
 
 		if(t> 1) cout<<endl;
 		cout << "Puzzle #" <<t++ <<":"<<endl;
