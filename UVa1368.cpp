@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<string.h>
-
+#include<cstdio>
+#include<cstring>
+using namespace std;
 char DNA[55][1050];
 int d[4];
 
@@ -12,7 +12,7 @@ int main(){
 	scanf("%d",&t);
 	while(t--){
 		int m,n;
-		scanf("%d %d",&m,&n);
+		scanf("%d%d",&m,&n);
 		int con = 0;
 		for(int i = 0;i<m;i++)		scanf("%s",&DNA[i][0]);
 
