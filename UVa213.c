@@ -11,7 +11,7 @@ int readchar(){
 
 int readint(int c){
 	int v = 0;
-	while(c--) v = v*2+readchar()-'0';
+	while(c--) v = v*2 + readchar()-'0';
 	return v;
 }
 
@@ -40,7 +40,7 @@ void printcodes(){
 
 int main(){
 	while(readcodes()){
-		//printfcodes();
+		//printcodes();
 		for(;;){
 			int len = readint(3);
 			if(len == 0)break;
