@@ -4,7 +4,7 @@
 #define BIG 10000
 int r,c,n,d[maxd][maxd],d2[maxd][maxd],ans[maxd][maxd],cols[maxd];
 
-void copy(char type,int p,int q){
+void copy(char type,int p,int q){ 
 	if(type == 'R'){
 		for(int i  = 1;i <= c;i++)
 			d[p][i] = d2[q][i];
